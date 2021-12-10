@@ -25,7 +25,11 @@
       <div>
       </div>
     </div>
+    <!-- Les effets de transition fonctionnent seulement sur le parent et par ricochet sur l'enfant le name sera considéré comme une classe en css -->
+    <transition name="slide" mode="out-in">
     <router-view :key="$route.path"/>
+    </transition>
+
   </div>
 </template>
 
@@ -53,5 +57,12 @@ export default {
   width:50%;
   height:5vh;
   border-bottom: solid 1px white;
+}
+.slide-leave-active,.slide-enter-active{
+    transition: opacity 1s, transform 1s
+}
+.slide-enter,.slide-leave-to{
+    opacity: 0;
+    transform: translateX(-20%)
 }
 </style>

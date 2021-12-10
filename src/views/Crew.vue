@@ -5,7 +5,9 @@
     <div class="text-space text-white text-left">
         <p class="text-xl">02 MEET YOUR CREW</p>
       </div>
+
       <router-view :key="$route.path"></router-view>
+
       <div class="explore">
         <router-link 
         class="pl-5 text-white"
@@ -58,4 +60,5 @@ export default {
     padding-right: 5px;
     padding-left: 5px;
 }
+
 </style>
